@@ -1,656 +1,224 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Esencia Cítrica</title>
-
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800;900&family=Poppins:wght@400;600;700;800&display=swap');
-
-*{margin:0;padding:0;box-sizing:border-box}
-
-body{
-    font-family:'Poppins',sans-serif;
-    background:#fff9ef;
-    color:#281816;
-}
-
-header{
-    height:78px;
-    padding:0 7%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:#fff3df;
-    position:fixed;
-    top:0;
-    width:100%;
-    z-index:1000;
-    box-shadow:0 2px 12px #0001;
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:14px;
-    font-size:25px;
-    font-weight:800;
-}
-
-.logo span{
-    width:48px;
-    height:48px;
-    background:linear-gradient(135deg,#ff8a00,#4caf50);
-    color:white;
-    border-radius:50%;
-    display:grid;
-    place-items:center;
-    font-family:'Playfair Display',serif;
-}
-
-nav a{
-    margin-left:25px;
-    text-decoration:none;
-    color:#6b5147;
-    font-weight:700;
-}
-
-nav a:hover{
-    color:#d26a18;
-}
-
-nav .pedido{
-    background:#93451f;
-    color:white;
-    padding:10px 15px;
-    border-radius:6px;
-}
-
-.hero{
-    min-height:100vh;
-    padding:140px 7% 60px;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:70px;
-    align-items:center;
-    background:
-    linear-gradient(90deg,#fff3df,#fffaf5,#f4fff2);
-}
-
-.tag{
-    color:#f2769d;
-    font-size:14px;
-    font-weight:800;
-}
-
-.tag::before{
-    content:"";
-    display:inline-block;
-    width:35px;
-    height:3px;
-    background:#f2769d;
-    margin-right:10px;
-    vertical-align:middle;
-}
-
-.hero h1{
-    font-family:'Playfair Display',serif;
-    font-size:120px;
-    line-height:.9;
-    margin:35px 0 25px;
-}
-
-.hero p{
-    color:#7b6157;
-    font-size:22px;
-    line-height:1.7;
-}
-
-.btns{
-    margin-top:30px;
-}
-
-.btn{
-    display:inline-block;
-    padding:16px 24px;
-    border-radius:8px;
-    font-size:22px;
-    font-weight:800;
-    text-decoration:none;
-    margin-right:12px;
-}
-
-.primary{
-    background:#93451f;
-    color:white;
-}
-
-.secondary{
-    background:white;
-    color:#281816;
-    border:1px solid #e4d4c4;
-}
-
-.hero-img{
-    height:430px;
-    background:
-    linear-gradient(135deg,#fff2d1,#fff,#e8ffe6);
-    border-radius:4px;
-    display:grid;
-    place-items:center;
-    box-shadow:0 25px 70px #0002;
-    position:relative;
-    overflow:hidden;
-}
-
-.hero-img .fruits{
-    font-size:160px;
-    filter:drop-shadow(0 20px 20px #0003);
-}
-
-.floating{
-    position:absolute;
-    background:#ffffffcc;
-    padding:18px 22px;
-    border-radius:10px;
-    box-shadow:0 12px 30px #0002;
-}
-
-.f1{left:25px;bottom:45px}
-.f2{right:35px;top:55px}
-
-.stats{
-    display:flex;
-    gap:18px;
-    margin-top:35px;
-}
-
-.stats div{
-    background:white;
-    padding:16px 22px;
-    border-radius:8px;
-    border:1px solid #e7d8c8;
-    color:#7b6157;
-}
-
-.banner{
-    margin:70px 7%;
-    padding:28px;
-    background:linear-gradient(90deg,#93451f,#df8b3a);
-    color:white;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    border-radius:8px;
-}
-
-.banner button{
-    padding:15px 22px;
-    border:0;
-    border-radius:8px;
-    font-weight:800;
-    cursor:pointer;
-}
-
-section{
-    padding:80px 7%;
-}
-
-h2{
-    font-family:'Playfair Display',serif;
-    font-size:72px;
-    line-height:1;
-    margin:20px 0;
-}
-
-.sub{
-    color:#7b6157;
-    font-size:21px;
-    margin-bottom:50px;
-}
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
-}
-
-.card{
-    background:white;
-    border:1px solid #e8d8c9;
-    border-radius:10px;
-    overflow:hidden;
-    box-shadow:0 20px 60px #0001;
-    position:relative;
-}
-
-.badge{
-    position:absolute;
-    right:20px;
-    top:20px;
-    background:#ef7fa2;
-    color:white;
-    padding:10px 18px;
-    border-radius:25px;
-    font-weight:800;
-}
-
-.imgbox{
-    height:250px;
-    background:linear-gradient(135deg,#fff2cc,#fff,#eaffdf);
-    display:grid;
-    place-items:center;
-    font-size:95px;
-}
-
-.card-content{
-    padding:28px;
-}
-
-.card h3{
-    font-size:26px;
-    margin-bottom:15px;
-}
-
-.card p{
-    color:#7b6157;
-    line-height:1.7;
-    font-size:18px;
-}
-
-.price{
-    margin-top:25px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.price strong{
-    font-size:35px;
-    color:#93451f;
-}
-
-.price button{
-    background:#4fa178;
-    color:white;
-    border:0;
-    padding:14px 20px;
-    border-radius:8px;
-    font-weight:800;
-    cursor:pointer;
-}
-
-.numbers{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:22px;
-}
-
-.numbers div{
-    background:white;
-    border:1px solid #e8d8c9;
-    padding:35px;
-    border-radius:8px;
-    text-align:center;
-}
-
-.numbers h3{
-    font-size:60px;
-    color:#93451f;
-}
-
-.promo-card{
-    padding:35px;
-    min-height:260px;
-}
-
-.promo-card h4{
-    color:#ef7fa2;
-    font-size:18px;
-}
-
-.gallery{
-    display:grid;
-    grid-template-columns:1.2fr 1fr 1fr;
-    gap:18px;
-}
-
-.gallery div{
-    height:260px;
-    background:linear-gradient(135deg,#ffe4b5,#fff,#dfffda);
-    border-radius:10px;
-    display:grid;
-    place-items:center;
-    font-size:90px;
-    box-shadow:0 15px 45px #0001;
-}
-
-.gallery .big{
-    height:540px;
-    grid-row:span 2;
-}
-
-.about{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-}
-
-.about-box{
-    background:white;
-    border:1px solid #e8d8c9;
-    padding:35px;
-    border-radius:10px;
-}
-
-.about-box p{
-    font-size:20px;
-    color:#7b6157;
-    line-height:1.8;
-    margin-bottom:15px;
-}
-
-.cta{
-    margin:70px 7%;
-    background:linear-gradient(90deg,#93451f,#df8b3a);
-    color:white;
-    padding:55px;
-    border-radius:10px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.cta h2{
-    max-width:800px;
-    color:white;
-}
-
-.cta button{
-    background:#93451f;
-    color:white;
-    border:0;
-    padding:18px 25px;
-    border-radius:8px;
-    font-size:20px;
-    font-weight:800;
-}
-
-footer{
-    background:#47251d;
-    color:#f5ddd0;
-    padding:70px 7% 35px;
-}
-
-.footer-grid{
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr 1fr;
-    gap:50px;
-}
-
-footer a, footer p{
-    display:block;
-    color:#f5ddd0;
-    margin:12px 0;
-    text-decoration:none;
-}
-
-.wa,.top{
-    position:fixed;
-    right:25px;
-    width:62px;
-    height:62px;
-    border-radius:50%;
-    display:grid;
-    place-items:center;
-    color:white;
-    font-weight:900;
-    text-decoration:none;
-}
-
-.wa{bottom:25px;background:#25d366}
-.top{bottom:95px;background:#93451f}
-
-@media(max-width:900px){
-    nav{display:none}
-    .hero,.about,.grid,.numbers,.footer-grid{grid-template-columns:1fr}
-    .hero h1{font-size:70px}
-    h2{font-size:48px}
-    .gallery{grid-template-columns:1fr}
-    .gallery .big{height:300px}
-    .cta{flex-direction:column;gap:25px}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esencia Cítrica</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<header>
-    <div class="logo">
-        <span>EC</span>
-        Esencia Cítrica
-    </div>
+<header class="navbar">
+  <div class="brand">
+    <span class="brand-mark">EC</span>
+    <strong>Esencia Cítrica</strong>
+  </div>
 
-    <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#productos">Productos</a>
-        <a href="#promos">Promociones</a>
-        <a href="#galeria">Galería</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#contacto">Contacto</a>
-        <a href="#pedido" class="pedido">Pedidos</a>
-    </nav>
+  <button class="hamburger" id="hamburger">☰</button>
+
+  <nav id="menu">
+    <a href="#inicio">Inicio</a>
+    <a href="#productos">Productos</a>
+    <a href="#promos">Promos</a>
+    <a href="#galeria">Galería</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#contacto">Contacto</a>
+    <a href="#pedido" class="nav-order">Pedidos</a>
+  </nav>
 </header>
 
 <section class="hero" id="inicio">
-    <div>
-        <p class="tag">HELADOS ARTESANALES DE FRUTAS NATURALES</p>
-        <h1>Esencia<br>Cítrica</h1>
-        <p>
-            Helados frescos, saludables y accesibles, elaborados con frutas naturales
-            como piña, limón, mandarina, naranja y pitahaya.
-        </p>
+  <div class="hero-copy reveal">
+    <p class="eyebrow">Helados artesanales naturales</p>
+    <h1>Esencia<br>Cítrica</h1>
+    <p class="lead">
+      Helados frescos, saludables y accesibles, elaborados con frutas naturales
+      como limón, piña, naranja, mandarina y pitahaya.
+    </p>
 
-        <div class="btns">
-            <a href="#pedido" class="btn primary">Ordenar Ahora</a>
-            <a href="#productos" class="btn secondary">Ver productos</a>
-        </div>
-
-        <div class="stats">
-            <div><b>C$29.99</b> precio sugerido</div>
-            <div><b>C$20-C$40</b> rango favorito</div>
-        </div>
+    <div class="hero-actions">
+      <a href="#pedido" class="btn primary">Ordenar ahora</a>
+      <a href="#productos" class="btn ghost">Ver productos</a>
     </div>
+  </div>
 
-    <div class="hero-img">
-        <div class="fruits">🍦🍊🍋🍍</div>
-        <div class="floating f1">
-            <small>Natural</small><br>
-            <b>100% fruta real</b>
-        </div>
-        <div class="floating f2">
-            <small>Promo activa</small><br>
-            <b>2x1 viernes</b>
-        </div>
+  <div class="hero-visual reveal">
+    <div class="emoji-main">🍦🍊🍋🍍</div>
+    <div class="floating-card fc1">
+      <small>Natural</small>
+      <b>100% fruta real</b>
     </div>
+    <div class="floating-card fc2">
+      <small>Promo</small>
+      <b>2 por C$50</b>
+    </div>
+  </div>
 </section>
 
-<div class="banner">
-    <strong>OFERTA DE LANZAMIENTO</strong>
-    <h3>2 helados artesanales por C$50</h3>
-    <button onclick="pedido('Promoción 2 helados por C$50')">Pedir promo</button>
+<div class="offer-strip reveal">
+  <span>OFERTA DE LANZAMIENTO</span>
+  <strong>2 helados artesanales por C$50</strong>
+  <button onclick="pedido('Promoción 2 helados por C$50')">Pedir promo</button>
 </div>
 
-<section id="productos">
-    <p class="tag">FAVORITOS DEL MERCADO</p>
-    <h2>Productos destacados</h2>
-    <p class="sub">Sabores cítricos y tropicales, con presentación moderna y precio accesible.</p>
+<section class="section" id="productos">
+  <p class="eyebrow">Favoritos del mercado</p>
+  <h2>Productos destacados</h2>
+  <p class="subtitle">Sabores cítricos y tropicales con presentación moderna.</p>
 
-    <div class="grid">
-        <div class="card">
-            <span class="badge">Más vendido</span>
-            <div class="imgbox">🍋🍦</div>
-            <div class="card-content">
-                <h3>Limón Tropical</h3>
-                <p>Refrescante, cítrico y natural. Ideal para días calurosos.</p>
-                <div class="price">
-                    <strong>C$29.99</strong>
-                    <button onclick="pedido('Limón Tropical')">Pedir</button>
-                </div>
-            </div>
+  <div class="product-grid">
+    <div class="product-card reveal">
+      <span class="pill">Más vendido</span>
+      <div class="imgbox">🍋🍦</div>
+      <div class="product-body">
+        <h3>Limón Tropical</h3>
+        <p>Refrescante, cítrico y natural. Ideal para días calurosos.</p>
+        <div class="price">
+          <strong>C$29.99</strong>
+          <button onclick="pedido('Limón Tropical')">Pedir</button>
         </div>
-
-        <div class="card">
-            <span class="badge">Natural</span>
-            <div class="imgbox">🍍🍦</div>
-            <div class="card-content">
-                <h3>Piña Fresh</h3>
-                <p>Sabor tropical dulce, perfecto para compartir en familia.</p>
-                <div class="price">
-                    <strong>C$29.99</strong>
-                    <button onclick="pedido('Piña Fresh')">Pedir</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <span class="badge">Nuevo</span>
-            <div class="imgbox">🐉🍦</div>
-            <div class="card-content">
-                <h3>Pitahaya Premium</h3>
-                <p>Exótico, colorido y saludable para consumidores innovadores.</p>
-                <div class="price">
-                    <strong>C$34.99</strong>
-                    <button onclick="pedido('Pitahaya Premium')">Pedir</button>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+
+    <div class="product-card reveal">
+      <span class="pill green">Natural</span>
+      <div class="imgbox">🍍🍦</div>
+      <div class="product-body">
+        <h3>Piña Fresh</h3>
+        <p>Sabor tropical dulce, perfecto para compartir en familia.</p>
+        <div class="price">
+          <strong>C$29.99</strong>
+          <button onclick="pedido('Piña Fresh')">Pedir</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+      <span class="pill">Nuevo</span>
+      <div class="imgbox">🐉🍦</div>
+      <div class="product-body">
+        <h3>Pitahaya Premium</h3>
+        <p>Exótico, colorido y saludable para consumidores innovadores.</p>
+        <div class="price">
+          <strong>C$34.99</strong>
+          <button onclick="pedido('Pitahaya Premium')">Pedir</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section>
-    <div class="numbers">
-        <div><h3>15-50</h3><p>años mercado objetivo</p></div>
-        <div><h3>C$17</h3><p>costo unitario</p></div>
-        <div><h3>C$30</h3><p>precio final</p></div>
-        <div><h3>40%</h3><p>margen deseado</p></div>
-    </div>
+<section class="numbers reveal">
+  <div><h3>C$17</h3><p>Costo unitario</p></div>
+  <div><h3>C$30</h3><p>Precio final</p></div>
+  <div><h3>40%</h3><p>Margen deseado</p></div>
+  <div><h3>15-50</h3><p>Mercado objetivo</p></div>
 </section>
 
-<section id="promos">
-    <p class="tag">PROMOS</p>
-    <h2>Ofertas que se comparten</h2>
-    <p class="sub">Promociones pensadas para estudiantes, familias y consumidores frecuentes.</p>
+<section class="section" id="promos">
+  <p class="eyebrow">Promociones</p>
+  <h2>Ofertas especiales</h2>
+  <p class="subtitle">Promos pensadas para estudiantes, familias y clientes frecuentes.</p>
 
-    <div class="grid">
-        <div class="card promo-card">
-            <h4>Lanzamiento</h4>
-            <h3>2 helados por C$50</h3>
-            <p>Ideal para atraer nuevos clientes y motivar la prueba del producto.</p>
-            <div class="price"><strong>C$50</strong></div>
-        </div>
-
-        <div class="card promo-card">
-            <h4>Familias</h4>
-            <h3>Combo Familiar</h3>
-            <p>Cuatro helados artesanales para compartir en casa o salidas.</p>
-            <div class="price"><strong>C$90</strong></div>
-        </div>
-
-        <div class="card promo-card">
-            <h4>Estudiantes</h4>
-            <h3>10% descuento</h3>
-            <p>Promoción especial presentando carnet estudiantil.</p>
-            <div class="price"><strong>-10%</strong></div>
-        </div>
+  <div class="promo-grid">
+    <div class="promo-card reveal">
+      <h4>Lanzamiento</h4>
+      <h3>2 helados por C$50</h3>
+      <p>Ideal para atraer nuevos clientes y motivar la prueba del producto.</p>
+      <strong>C$50</strong>
     </div>
+
+    <div class="promo-card reveal">
+      <h4>Familias</h4>
+      <h3>Combo Familiar</h3>
+      <p>Cuatro helados artesanales para compartir en casa.</p>
+      <strong>C$90</strong>
+    </div>
+
+    <div class="promo-card reveal">
+      <h4>Estudiantes</h4>
+      <h3>10% descuento</h3>
+      <p>Promoción especial presentando carnet estudiantil.</p>
+      <strong>-10%</strong>
+    </div>
+  </div>
 </section>
 
-<section id="galeria">
-    <p class="tag">GALERÍA</p>
-    <h2>Visual, fresco y artesanal</h2>
+<section class="section" id="galeria">
+  <p class="eyebrow">Galería</p>
+  <h2>Fresco, natural y artesanal</h2>
 
-    <div class="gallery">
-        <div class="big">🍊🍋🍍</div>
-        <div>🍦🍓</div>
-        <div>🥤🍍</div>
-        <div>🍧🐉</div>
-        <div>🎉🍦</div>
-    </div>
+  <div class="gallery reveal">
+    <div class="wide">🍊🍋🍍</div>
+    <div>🍦🍓</div>
+    <div>🥤🍍</div>
+    <div>🍧🐉</div>
+    <div>🎉🍦</div>
+  </div>
 </section>
 
-<section id="nosotros">
-    <div class="about">
-        <div>
-            <p class="tag">NOSOTROS</p>
-            <h2>Natural, refrescante y saludable</h2>
-        </div>
-
-        <div class="about-box">
-            <p>
-                Esencia Cítrica es un emprendimiento nicaragüense dedicado a la
-                producción y comercialización de helados artesanales elaborados con frutas naturales.
-            </p>
-            <p>
-                La marca se enfoca en ofrecer una alternativa saludable, accesible y moderna
-                para jóvenes, familias, deportistas y consumidores interesados en el bienestar.
-            </p>
-        </div>
+<section class="section" id="nosotros">
+  <div class="about">
+    <div class="reveal">
+      <p class="eyebrow">Nosotros</p>
+      <h2>Natural, refrescante y saludable</h2>
     </div>
+
+    <div class="about-text reveal">
+      <p>
+        Esencia Cítrica es un emprendimiento nicaragüense dedicado a la producción
+        y comercialización de helados artesanales elaborados con frutas naturales.
+      </p>
+      <p>
+        Nuestra marca ofrece una alternativa saludable, accesible y moderna para
+        jóvenes, familias y consumidores interesados en el bienestar.
+      </p>
+    </div>
+  </div>
 </section>
 
-<section class="cta" id="pedido">
-    <h2>Tu próxima pausa puede saber a fruta natural.</h2>
-    <button onclick="pedido('Combo Cítrico')">Pedir por WhatsApp</button>
+<section class="cta reveal" id="pedido">
+  <h2>Tu próxima pausa puede saber a fruta natural.</h2>
+  <button onclick="pedido('Combo Cítrico')">Pedir por WhatsApp</button>
 </section>
 
 <footer id="contacto">
-    <div class="footer-grid">
-        <div>
-            <h3>Esencia Cítrica</h3>
-            <p>Helados artesanales de frutas naturales en Masaya, Nicaragua.</p>
-            <p>Natural, refrescante y saludable.</p>
-        </div>
-
-        <div>
-            <h4>MENÚ</h4>
-            <a href="#productos">Productos</a>
-            <a href="#promos">Promociones</a>
-            <a href="#nosotros">Nosotros</a>
-        </div>
-
-        <div>
-            <h4>REDES</h4>
-            <a>Instagram</a>
-            <a>Facebook</a>
-            <a>TikTok</a>
-            <a>WhatsApp</a>
-        </div>
-
-        <div>
-            <h4>CONTACTO</h4>
-            <p>Masaya, Nicaragua</p>
-            <p>Lunes a sábado</p>
-            <p>9:00 AM - 6:00 PM</p>
-        </div>
+  <div class="footer-grid">
+    <div>
+      <h3>Esencia Cítrica</h3>
+      <p>Helados artesanales de frutas naturales en Masaya, Nicaragua.</p>
     </div>
 
-    <hr>
-    <p>© 2026 Esencia Cítrica. Proyecto académico.</p>
+    <div>
+      <h4>Menú</h4>
+      <a href="#productos">Productos</a>
+      <a href="#promos">Promociones</a>
+      <a href="#nosotros">Nosotros</a>
+    </div>
+
+    <div>
+      <h4>Redes</h4>
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">TikTok</a>
+    </div>
+
+    <div>
+      <h4>Contacto</h4>
+      <p>Masaya, Nicaragua</p>
+      <p>Lunes a sábado</p>
+      <p>9:00 AM - 6:00 PM</p>
+    </div>
+  </div>
+
+  <hr>
+  <p>© 2026 Esencia Cítrica. Proyecto académico.</p>
 </footer>
 
-<a href="#inicio" class="top">↑</a>
-<a href="https://wa.me/50588888888" target="_blank" class="wa">WA</a>
+<a href="#inicio" class="top-btn">↑</a>
+<a href="https://wa.me/50557817630" target="_blank" class="wa-btn">WA</a>
 
-<script>
-function pedido(producto){
-    const numero = "57817630";
-    const mensaje = "Hola, quiero pedir " + producto + " de Esencia Cítrica.";
-    const url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensaje);
-    window.open(url, "_blank");
-}
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>

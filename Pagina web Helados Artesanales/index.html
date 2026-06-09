@@ -11,16 +11,21 @@
 
 <header class="navbar">
   <div class="brand">
-    <span class="brand-mark">EC</span>
-    <strong>Esencia Cítrica</strong>
-  </div>
+   <img src="Imagenes/logo.png.jpeg" alt="Logo Esencia Cítrica" class="logo-img">
+
+    <div class="brand-text">
+        <h2>Esencia Cítrica</h2>
+        <p>✨ Helados Artesanales ✨</p>
+    </div>
+</div>
 
   <button class="hamburger" id="hamburger">☰</button>
 
   <nav id="menu">
     <a href="#inicio">Inicio</a>
     <a href="#productos">Productos</a>
-    <a href="#promos">Promos</a>
+    <a href="#beneficios">Beneficios</a>
+    <a href="#promos">Promociones</a>
     <a href="#galeria">Galería</a>
     <a href="#nosotros">Nosotros</a>
     <a href="#contacto">Contacto</a>
@@ -31,11 +36,11 @@
 <section class="hero" id="inicio">
   <div class="hero-copy reveal">
     <p class="eyebrow">Helados artesanales naturales</p>
-    <h1>Esencia<br>Cítrica</h1>
-    <p class="lead">
-      Helados frescos, saludables y accesibles, elaborados con frutas naturales
-      como limón, piña, naranja, mandarina y pitahaya.
-    </p>
+    <h1>Sabores que <br><span>te hacen feliz</span></h1>
+   <p class="lead">
+  Helados artesanales elaborados con frutas frescas y naturales.
+  Sin conservantes, sin prisas, solo sabor auténtico.
+</p>
 
     <div class="hero-actions">
       <a href="#pedido" class="btn primary">Ordenar ahora</a>
@@ -43,17 +48,9 @@
     </div>
   </div>
 
-  <div class="hero-visual reveal">
-    <div class="emoji-main">🍦🍊🍋🍍</div>
-    <div class="floating-card fc1">
-      <small>Natural</small>
-      <b>100% fruta real</b>
-    </div>
-    <div class="floating-card fc2">
-      <small>Promo</small>
-      <b>2 por C$50</b>
-    </div>
-  </div>
+<div class="hero-visual reveal">
+<img src="Imagenes/hero.jpeg.png" alt="Helados Esencia Cítrica" class="hero-image">
+</div>
 </section>
 
 <div class="offer-strip reveal">
@@ -69,42 +66,100 @@
 
   <div class="product-grid">
     <div class="product-card reveal">
-      <span class="pill">Más vendido</span>
-      <div class="imgbox">🍋🍦</div>
+     <img src="Imagenes/limon.jpg.jpeg">
       <div class="product-body">
-        <h3>Limón Tropical</h3>
-        <p>Refrescante, cítrico y natural. Ideal para días calurosos.</p>
-        <div class="price">
-          <strong>C$29.99</strong>
-          <button onclick="pedido('Limón Tropical')">Pedir</button>
-        </div>
+        <h3>Limón</h3>
+        <p>Refrescante y cítrico, el clásico que nunca falla.</p>
+        <div class="price"><strong>C$29.99</strong><button onclick="pedido('Limón')">Pedir</button></div>
       </div>
     </div>
 
     <div class="product-card reveal">
-      <span class="pill green">Natural</span>
-      <div class="imgbox">🍍🍦</div>
+      <img src="Imagenes/mango.jpg.jpeg">
       <div class="product-body">
-        <h3>Piña Fresh</h3>
-        <p>Sabor tropical dulce, perfecto para compartir en familia.</p>
-        <div class="price">
-          <strong>C$29.99</strong>
-          <button onclick="pedido('Piña Fresh')">Pedir</button>
-        </div>
+        <h3>Mango</h3>
+        <p>Suave, dulce y tropical, el favorito de muchos.</p>
+        <div class="price"><strong>C$29.99</strong><button onclick="pedido('Mango')">Pedir</button></div>
       </div>
     </div>
 
     <div class="product-card reveal">
-      <span class="pill">Nuevo</span>
-      <div class="imgbox">🐉🍦</div>
+      <img src="Imagenes/pina.png.jpeg">
+      <div class="product-body">
+        <h3>Piña</h3>
+        <p>Dulce y jugoso, sabor lleno de frescura.</p>
+        <div class="price"><strong>C$29.99</strong><button onclick="pedido('Piña')">Pedir</button></div>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+      <img src="Imagenes/pitahaya.png.jpeg">
       <div class="product-body">
         <h3>Pitahaya Premium</h3>
-        <p>Exótico, colorido y saludable para consumidores innovadores.</p>
-        <div class="price">
-          <strong>C$34.99</strong>
-          <button onclick="pedido('Pitahaya Premium')">Pedir</button>
-        </div>
+        <p>Exótico, antioxidante y lleno de color natural.</p>
+        <div class="price"><strong>C$34.99</strong><button onclick="pedido('Pitahaya')">Pedir</button></div>
       </div>
+    </div>
+
+    <div class="product-card reveal">
+     <img src="Imagenes/naranja.png.jpeg">
+      <div class="product-body">
+        <h3>Naranja</h3>
+        <p>Cítrico, dulce y lleno de vitamina C.</p>
+        <div class="price"><strong>C$29.99</strong><button onclick="pedido('Naranja')">Pedir</button></div>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+     <img src="Imagenes/mandarina.png.jpeg">
+      <div class="product-body">
+        <h3>Mandarina</h3>
+        <p>Suave, fresca y perfecta para cualquier momento.</p>
+        <div class="price"><strong>C$29.99</strong><button onclick="pedido('Mandarina')">Pedir</button></div>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+      <img src="Imagenes/fresa.png.jpeg">
+      <div class="product-body">
+        <h3>Fresa</h3>
+        <p>Clásico, dulce y siempre delicioso.</p>
+        <div class="price"><strong>C$29.99</strong><button onclick="pedido('Fresa')">Pedir</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section beneficios" id="beneficios">
+  <p class="eyebrow">Por qué elegirnos</p>
+  <h2>Una opción natural y refrescante</h2>
+  <p class="subtitle">
+    Nuestro emprendimiento busca ofrecer helados artesanales con identidad, sabor y calidad.
+  </p>
+
+  <div class="benefit-grid">
+    <div class="benefit-card reveal">
+      <span>🍊</span>
+      <h3>Frutas naturales</h3>
+      <p>Utilizamos sabores inspirados en frutas frescas y tropicales.</p>
+    </div>
+
+    <div class="benefit-card reveal">
+      <span>🍦</span>
+      <h3>Elaboración artesanal</h3>
+      <p>Cada producto se prepara con cuidado para mantener un sabor auténtico.</p>
+    </div>
+
+    <div class="benefit-card reveal">
+      <span>🌱</span>
+      <h3>Alternativa saludable</h3>
+      <p>Una propuesta refrescante para quienes buscan consumir algo más natural.</p>
+    </div>
+
+    <div class="benefit-card reveal">
+      <span>❤️</span>
+      <h3>Emprendimiento local</h3>
+      <p>Proyecto creado con visión juvenil, creatividad y enfoque universitario.</p>
     </div>
   </div>
 </section>
@@ -118,14 +173,14 @@
     <div class="promo-card reveal">
       <h4>Lanzamiento</h4>
       <h3>2 helados por C$50</h3>
-      <p>Ideal para atraer nuevos clientes y motivar la prueba del producto.</p>
+      <p>Promoción especial para dar a conocer nuestros sabores artesanales.</p>
       <strong>C$50</strong>
     </div>
 
     <div class="promo-card reveal">
       <h4>Familias</h4>
       <h3>Combo Familiar</h3>
-      <p>Cuatro helados artesanales para compartir en casa.</p>
+      <p>Una opción ideal para compartir helados en casa o con amigos.</p>
       <strong>C$90</strong>
     </div>
 
@@ -139,36 +194,71 @@
 </section>
 
 <section class="section" id="galeria">
-  <p class="eyebrow">Galería</p>
-  <h2>Fresco, natural y artesanal</h2>
 
-  <div class="gallery reveal">
-    <div class="wide">🍊🍋🍍</div>
-    <div>🍦🍓</div>
-    <div>🥤🍍</div>
-    <div>🍧🐉</div>
-    <div>🎉🍦</div>
-  </div>
+    <p class="eyebrow">GALERÍA</p>
+
+    <h2>Nuestros momentos favoritos</h2>
+
+    <p class="subtitle">
+        Descubre la experiencia Esencia Cítrica a través de nuestros productos,
+        ingredientes naturales y momentos compartidos.
+    </p>
+
+    <div class="gallery-grid">
+
+        <div class="gallery-item large">
+            <img src="Imagenes/galeria1.jpg.png" alt="Helados artesanales">
+        </div>
+
+        <div class="gallery-item">
+            <img src="Imagenes/galeria2.jpg.png" alt="Frutas naturales">
+        </div>
+
+        <div class="gallery-item">
+            <img src="Imagenes/galeria3.jpg.png" alt="Preparación artesanal">
+        </div>
+
+        <div class="gallery-item">
+            <img src="Imagenes/galeria4.jpg.png" alt="Presentación premium">
+        </div>
+
+        <div class="gallery-item">
+            <img src="Imagenes/galeria5.jpg.png" alt="Clientes disfrutando">
+        </div>
+
+    </div>
+
 </section>
 
-<section class="section" id="nosotros">
-  <div class="about">
-    <div class="reveal">
-      <p class="eyebrow">Nosotros</p>
-      <h2>Natural, refrescante y saludable</h2>
+<section class="section" id="mision-vision">
+
+    <p class="eyebrow">NUESTRA IDENTIDAD</p>
+
+    <h2>Misión y Visión</h2>
+
+    <div class="mv-grid">
+
+        <div class="mv-card">
+            <h3>🎯 Misión</h3>
+            <p>
+                Elaborar helados artesanales de alta calidad utilizando frutas
+                naturales e ingredientes frescos, ofreciendo una experiencia
+                saludable, deliciosa y accesible que satisfaga las preferencias
+                de nuestros clientes.
+            </p>
+        </div>
+
+        <div class="mv-card">
+            <h3>🚀 Visión</h3>
+            <p>
+                Consolidarnos como una marca reconocida en el mercado local por
+                la calidad de nuestros productos artesanales, la innovación en
+                sabores y el compromiso con la satisfacción de nuestros clientes.
+            </p>
+        </div>
+
     </div>
 
-    <div class="about-text reveal">
-      <p>
-        Esencia Cítrica es un emprendimiento nicaragüense dedicado a la producción
-        y comercialización de helados artesanales elaborados con frutas naturales.
-      </p>
-      <p>
-        Nuestra marca ofrece una alternativa saludable, accesible y moderna para
-        jóvenes, familias y consumidores interesados en el bienestar.
-      </p>
-    </div>
-  </div>
 </section>
 
 <section class="cta reveal" id="pedido">
@@ -186,6 +276,7 @@
     <div>
       <h4>Menú</h4>
       <a href="#productos">Productos</a>
+      <a href="#beneficios">Beneficios</a>
       <a href="#promos">Promociones</a>
       <a href="#nosotros">Nosotros</a>
     </div>
@@ -195,6 +286,7 @@
       <a href="#">Instagram</a>
       <a href="#">Facebook</a>
       <a href="#">TikTok</a>
+      <a href="https://wa.me/50557817630" target="_blank">WhatsApp</a>
     </div>
 
     <div>
@@ -206,7 +298,7 @@
   </div>
 
   <hr>
-  <p>© 2026 Esencia Cítrica. Proyecto académico.</p>
+  <p>© 2026 Esencia Cítrica. Proyecto universitario.</p>
 </footer>
 
 <a href="#inicio" class="top-btn">↑</a>
